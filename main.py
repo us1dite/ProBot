@@ -10,7 +10,10 @@ dp = Dispatcher()
 
 @dp.message(CommandStart())
 async def start(message: Message):
-    await message.answer("Добро пожаловать в бота по напоминаниям и уведомлениям")
+    if message.from_user.id in TEACHERS:
+        await message.answer("Добро пожаловать в бота по напоминаниям и уведомлениям. Вы зарегестрированы как учитель")
+    elif message.from_user.id not in TEACHERS:
+        await message.answer("Добро пожаловать в бота по напоминаниям и уведомлениям. Вы зарегестрированы как ученик")
 
 async def main():
     await dp.start_polling(bot)
