@@ -7,6 +7,7 @@ from aiogram.types import Message
 bot = Bot(token='')
 dp = Dispatcher()
 
+TEACHERS = [5610944959]
 
 @dp.message(CommandStart())
 async def start(message: Message):
