@@ -4,7 +4,7 @@ from aiogram.filters import Command, CommandStart
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 
-bot = Bot(token='')
+bot = Bot(token='6417290102:AAGt-p23cTBXdKQ3ZTmw7p08JzjxH2VHTBc')
 dp = Dispatcher()
 
 TEACHERS = [5610944959]
